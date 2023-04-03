@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+  /* Primary colors */
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  /* Neutral Colors */
+  --dark-brown: hsl(125, 47%, 15%);
+  --mid-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --pale-orange: hsl(33, 100%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Sets the body default */
+body {
+  height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  padding-top: 0.3em;
+}
+
+p {
+  padding-block: 0.1em;
+}
+
+hr {
+  border: 1px solid var(--cream);
+  margin-block: 1em;
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.amount {
+  font-size: 2rem;
+}
+
+.bg-bar {
+  background-color: var(--soft-red);
+}
+
+.bg-top {
+  background-color: var(--cyan);
+}
+
+/* Layout */
+.container {
+  max-width: 375px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.balance {
+  background-color: var(--soft-red);
+  color: #fff;
+  margin-bottom: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance-text p:nth-child(1) {
+  color: var(--cream);
+}
+
+.spend {
+  background-color: #fff;
+}
+
+.balance,
+.spend {
+  padding: 1em;
+  border-radius: 0.8rem;
+}
+
+.chart {
+  height: 45vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.day-wrapper {
+  margin: 0.3em;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.bar {
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 0.5em;
+}
+
+.day {
+  font-size: 0.8rem;
+}
+
+.day,
+.total > p:nth-child(1),
+.compare > p:nth-child(2) {
+  color: var(--mid-brown);
+}
+
+.total-wrapper {
+  justify-content: space-between;
+  padding-block: 0.5em;
+}
+
+.compare {
+  align-self: flex-end;
+  font-size: 1rem;
+}
+
+.compare > p:nth-child(1) {
+  text-align: right;
+  padding: 0;
+}
+
+/* Media queries */
+@media (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 550px;
+  }
+}
